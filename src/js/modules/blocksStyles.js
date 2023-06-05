@@ -92,4 +92,27 @@ export default function blocksStyles() {
 		);
 		document.querySelectorAll('.video-wrapper').forEach((item) => observer.observe(item));
 	}
+
+	if (document.querySelector('[data-decor]')) {
+		document.querySelectorAll('[data-decor]').forEach((el) => {
+			const index = +el.dataset.decor;
+
+			if (el.textContent !== '') {
+				if (index > 0) {
+					el.innerHTML = `${el.textContent.slice(
+						0,
+						index
+					)}<span class="decor-title">${el.textContent.slice(
+						index,
+						index + 1
+					)}</span>${el.textContent.slice(index + 1)}`;
+				} else if (index === 0) {
+					el.innerHTML = `<span class="decor-title">${el.textContent.slice(
+						index,
+						index + 1
+					)}</span>${el.textContent.slice(index + 1)}`;
+				}
+			}
+		});
+	}
 }
