@@ -1,0 +1,153 @@
+h1,
+h2,
+main p,
+ul:not([role="menu"], .s_ocial) li,
+ol:not([role="menu"], .s_ocial) li,
+.animate-3>div,
+.top-section__add .btn,
+.top-section__add .modal-btn,
+.top-section__img,
+.about-us__img,
+.breadcrumbs li,
+.info__btn {
+	opacity: 0;
+}
+
+.desktop-user-agent {
+
+	h1,
+	h2,
+	main p,
+	ul:not([role="menu"], .s_ocial) li,
+	ol:not([role="menu"], .s_ocial) li,
+	.animate-3>div,
+	.top-section__add .btn,
+	.top-section__add .modal-btn,
+	.top-section__img,
+	.about-us__img,
+	.breadcrumbs li,
+	.info__btn {
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: both;
+	}
+
+	@for $i from 1 through 20 {
+
+		ul:not([role="menu"], .s_ocial) li:nth-child(#{$i}),
+		ol:not([role="menu"], .s_ocial) li:nth-child(#{$i}) {
+			animation-delay: $i * 0.1s;
+		}
+	}
+
+	@for $i from 1 through 20 {
+		.top-section__img:nth-child(#{$i}) {
+			animation-delay: $i * 0.1s;
+		}
+	}
+
+	@for $i from 1 through 20 {
+		.about-us__img:nth-child(#{$i}) {
+			animation-delay: $i * 0.1s;
+		}
+	}
+
+	@for $i from 1 through 20 {
+		.animate-3 {
+			>div:nth-child(#{$i}) {
+				animation-delay: $i * 0.1s;
+			}
+		}
+	}
+
+	@for $i from 1 through 20 {
+		.breadcrumbs {
+			>li:nth-child(#{$i}) {
+				animation-delay: $i * 0.1s;
+			}
+		}
+	}
+}
+
+.mobile-user-agent {
+
+	h1,
+	h2,
+	main p,
+	ul:not([role="menu"], .s_ocial) li,
+	ol:not([role="menu"], .s_ocial) li,
+	.animate-3>div,
+	.top-section__add .btn,
+	.top-section__add .modal-btn,
+	.top-section__img,
+	.about-us__img,
+	.breadcrumbs li,
+	.info__btn {
+		opacity: 1;
+	}
+}
+
+@keyframes zoomIn {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.zoomIn {
+	animation-name: zoomIn;
+}
+
+@keyframes slideInUp {
+	from {
+		transform: translate3d(0, 100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.slideInUp {
+	animation-name: slideInUp;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.slideInLeft {
+	animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+	}
+
+	to {
+		opacity: 1;
+		transform: translateZ(0);
+	}
+}

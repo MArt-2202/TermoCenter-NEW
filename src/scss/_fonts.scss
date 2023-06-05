@@ -1,0 +1,16 @@
+@include font-face('Montserrat',
+	'Montserrat/MontserratLight/MontserratLight',
+	300,
+	normal,
+	swap);
+@include font-face('Montserrat',
+	'Montserrat/MontserratRegular/MontserratRegular',
+	400,
+	normal,
+	swap);
+
+@include font-face('MontserratAlternates',
+	'MontserratAlternates/MontserratAlternatesBlack/MontserratAlternatesBlack',
+	900,
+	normal,
+	swap);
