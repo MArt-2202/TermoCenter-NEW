@@ -95,6 +95,24 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	}
 }
 
+.content {
+	display: flex;
+}
+
+.content__aside {
+	flex: none;
+}
+
+.content__main {
+	flex-grow: 1;
+}
+
+@media (max-width: 1024px) {
+	.content {
+		flex-direction: column;
+	}
+}
+
 h1,
 h2 {
 	font-family: $f1;
