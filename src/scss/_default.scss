@@ -108,8 +108,8 @@ blockquote,
 	margin-bottom: 33px;
 }
 
-ul:not([role="menu"], .s_ocial),
-ol:not([role="menu"], .s_ocial) {
+ul:not([role="menu"], .s_ocial, .phones-info),
+ol:not([role="menu"], .s_ocial, .phones-info) {
 	li {
 		position: relative;
 		line-height: 1.4;
@@ -125,7 +125,7 @@ ol:not([role="menu"], .s_ocial) {
 	}
 }
 
-ul:not([role="menu"], .s_ocial) {
+ul:not([role="menu"], .s_ocial, .phones-info) {
 	li {
 		padding-left: 14px;
 
@@ -141,7 +141,7 @@ ul:not([role="menu"], .s_ocial) {
 	}
 }
 
-ol:not([role="menu"], .s_ocial) {
+ol:not([role="menu"], .s_ocial, .phones-info) {
 	counter-reset: num;
 
 	li {
@@ -268,6 +268,12 @@ video {
 		display: inline-block;
 	}
 
+	li {
+		&:not(:last-child) {
+			margin-right: 14px;
+		}
+	}
+
 	a {
 		text-decoration: none;
 
@@ -304,12 +310,46 @@ video {
 .s_ocial-style-1 {
 	a {
 		color: $c3;
+
+		&.s_ocial__f_acebook {
+			&:hover {
+				color: $c5;
+			}
+		}
+
+		&.s_ocial__l_inkedin {
+			&:hover {
+				color: $c6;
+			}
+		}
+
+		&.s_ocial__i_nstagram {
+			&:hover {
+				color: $c7;
+			}
+		}
+
+		&.s_ocial__v_iber {
+			&:hover {
+				color: $c8;
+			}
+		}
+
+		&.s_ocial__t_elegram {
+			&:hover {
+				color: $c9;
+			}
+		}
 	}
 }
 
 .s_ocial-style-2 {
 	a {
 		color: $c1;
+
+		&:hover {
+			color: $c4;
+		}
 	}
 }
 
