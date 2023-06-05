@@ -62,7 +62,7 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 		padding-left: 55px;
 	}
 
-	.container-style-5 {
+	.container-style-2 {
 		padding-left: 105px;
 	}
 }
@@ -206,6 +206,11 @@ picture {
 strong,
 b {
 	font-weight: 700;
+}
+
+.logo-company {
+	display: inline-block;
+	text-decoration: none;
 }
 
 .list-img,
