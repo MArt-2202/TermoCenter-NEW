@@ -247,3 +247,30 @@
 		}
 	}
 }
+
+.style-1 {
+	margin-bottom: 100px;
+}
+
+@media (max-width: 1024px) {
+	.style-1 {
+		margin-bottom: 80px;
+	}
+}
+
+.decor-title {
+	position: relative;
+	display: inline-block;
+	padding-top: 45px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 22px;
+		height: 34px;
+		background: url(../img/bg-2.svg) no-repeat;
+	}
+}
