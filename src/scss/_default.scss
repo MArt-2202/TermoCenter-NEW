@@ -57,6 +57,16 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	margin-right: auto;
 }
 
+@media (min-width: 1231px) {
+	.container-style-1 {
+		padding-left: 55px;
+	}
+
+	.container-style-5 {
+		padding-left: 105px;
+	}
+}
+
 @media (max-width: 1230px) {
 	.container {
 		padding-left: mp(50, 1230);
