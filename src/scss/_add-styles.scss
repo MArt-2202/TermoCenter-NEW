@@ -168,7 +168,11 @@
 		color: $c10;
 
 		&:after {
-			background-color: $c10;
+			background-color: $c3;
+		}
+
+		&:hover {
+			color: $c3;
 		}
 	}
 }
