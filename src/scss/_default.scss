@@ -107,6 +107,16 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	flex-grow: 1;
 }
 
+@media (min-width: 1025px) {
+	.content-2 {
+		gap: 0 mp(65, 1030);
+	}
+
+	.content-2__aside {
+		width: 410px;
+	}
+}
+
 @media (max-width: 1024px) {
 	.content {
 		flex-direction: column;
@@ -114,10 +124,15 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 }
 
 h1,
-h2 {
+h2,
+h3 {
 	font-family: $f1;
 	font-weight: 900;
 	line-height: 1.2;
+}
+
+h1,
+h2 {
 	color: $c3;
 }
 
@@ -142,15 +157,26 @@ ul:not([role="menu"], .s_ocial, .phones-info),
 ol:not([role="menu"], .s_ocial, .phones-info) {
 	li {
 		position: relative;
-		line-height: 1.4;
+		line-height: 1.2;
+		font-weight: 400;
 
 		&:not(:last-child) {
-			margin-top: 10px;
+			margin-bottom: 9px;
 		}
 
 		&:before {
 			position: absolute;
 			left: 0;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		background: linear-gradient(0deg, $c3, $c3) right bottom/100% 1px no-repeat;
+
+		&:hover {
+			background-size: 0 1px;
+			background-position-x: right;
 		}
 	}
 }
@@ -161,11 +187,10 @@ ul:not([role="menu"], .s_ocial, .phones-info) {
 
 		&:before {
 			content: '';
-			top: 8px;
+			top: 6px;
 			left: 0;
 			width: 4px;
 			height: 4px;
-			border-radius: 50%;
 			background-color: $c3;
 		}
 	}
@@ -304,6 +329,8 @@ video {
 	}
 
 	li {
+		vertical-align: middle;
+
 		&:not(:last-child) {
 			margin-right: 14px;
 		}
