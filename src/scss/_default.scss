@@ -65,6 +65,10 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	.container-style-2 {
 		padding-left: 105px;
 	}
+
+	.container-style-3 {
+		padding-right: 65px;
+	}
 }
 
 @media (max-width: 1230px) {
@@ -99,15 +103,21 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	display: flex;
 }
 
-.content__aside {
-	flex: none;
-}
-
 .content__main {
 	flex-grow: 1;
 }
 
 @media (min-width: 1025px) {
+	.content-1 {
+		gap: 0 mp(60, 1135);
+		align-items: center;
+	}
+
+	.content-1__aside,
+	.content-1__main {
+		width: 50%;
+	}
+
 	.content-2 {
 		gap: 0 mp(65, 1030);
 	}
