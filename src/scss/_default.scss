@@ -153,8 +153,8 @@ blockquote,
 	margin-bottom: 33px;
 }
 
-ul:not([role="menu"], .s_ocial, .phones-info),
-ol:not([role="menu"], .s_ocial, .phones-info) {
+ul:not([role="menu"], .reset-list),
+ol:not([role="menu"], .reset-list) {
 	li {
 		position: relative;
 		line-height: 1.2;
@@ -181,7 +181,7 @@ ol:not([role="menu"], .s_ocial, .phones-info) {
 	}
 }
 
-ul:not([role="menu"], .s_ocial, .phones-info) {
+ul:not([role="menu"], .reset-list) {
 	li {
 		padding-left: 14px;
 
@@ -196,7 +196,7 @@ ul:not([role="menu"], .s_ocial, .phones-info) {
 	}
 }
 
-ol:not([role="menu"], .s_ocial, .phones-info) {
+ol:not([role="menu"], .reset-list) {
 	counter-reset: num;
 
 	li {
