@@ -14,6 +14,19 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+@media (min-width: 1231px) {
+	body {
+		position: relative;
+	}
+
+	main {
+		.container {
+			position: relative;
+			z-index: 1;
+		}
+	}
+}
+
 *,
 *:before,
 *:after {
@@ -27,6 +40,7 @@ footer {
 
 main {
 	flex: 1 0 auto;
+	padding-top: 45px;
 }
 
 picture::selection,
@@ -123,7 +137,8 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	}
 
 	.content-2__aside,
-	.content-3__aside {
+	.content-3__aside,
+	.content-4__aside {
 		flex: none;
 	}
 
@@ -133,6 +148,15 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 
 	.content-3__aside {
 		width: calc(min(400px, 100%));
+	}
+
+	.content-4 {
+		gap: 0 mp(60, 1200);
+		align-items: center;
+	}
+
+	.content-4__aside {
+		width: mp(545, 1200);
 	}
 }
 
