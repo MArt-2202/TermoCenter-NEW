@@ -278,3 +278,40 @@
 		background: url(../img/bg-2.svg) no-repeat;
 	}
 }
+
+@media (min-width: 1231px) {
+	.decor {
+		position: absolute;
+		top: 660px;
+		left: 0;
+		width: 84px;
+		height: 378px;
+		background: url(../img/bg-1.svg) no-repeat;
+	}
+}
+
+.link-1 {
+	display: inline-block;
+	text-decoration: none;
+
+	span {
+		padding-bottom: 4px;
+		background: linear-gradient(0deg, $c4, $c4) right bottom/100% 1px no-repeat;
+		@include trs;
+	}
+
+	&:hover {
+		text-decoration: none;
+
+		span {
+			background-size: 0 1px;
+			background-position-x: right;
+		}
+	}
+}
+
+.link-style-1 {
+	font-size: fsz(12, 14);
+	font-weight: 400;
+	line-height: 1.5;
+}
