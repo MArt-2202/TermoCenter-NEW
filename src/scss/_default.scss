@@ -138,7 +138,8 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 
 	.content-2__aside,
 	.content-3__aside,
-	.content-4__aside {
+	.content-4__aside,
+	.content-5__aside {
 		flex: none;
 	}
 
@@ -157,6 +158,10 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 
 	.content-4__aside {
 		width: mp(545, 1200);
+	}
+
+	.content-5__aside {
+		width: mp(545, 1095);
 	}
 }
 
@@ -185,7 +190,7 @@ h1 {
 }
 
 h2 {
-	margin-bottom: 44px;
+	margin-bottom: 38px;
 	font-size: fsz(28, 14);
 }
 
