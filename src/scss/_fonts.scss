@@ -8,7 +8,11 @@
 	400,
 	normal,
 	swap);
-
+@include font-face('Montserrat',
+	'Montserrat/MontserratBold/MontserratBold',
+	700,
+	normal,
+	swap);
 @include font-face('MontserratAlternates',
 	'MontserratAlternates/MontserratAlternatesBlack/MontserratAlternatesBlack',
 	900,
