@@ -465,9 +465,23 @@ video {
 	}
 }
 
+.s_ocial-style-3 {
+	a {
+		&.s_ocial__f_acebook {
+			width: 10px;
+			height: 10px;
+			background-color: $c1;
+			border-radius: 50%;
+
+			svg {
+				vertical-align: top;
+			}
+		}
+	}
+}
+
 .breadcrumbs {
-	margin-bottom: 19px;
-	line-height: initial;
+	margin-bottom: 8px;
 
 	li,
 	a {
@@ -479,21 +493,19 @@ video {
 
 		&:not(:last-child) {
 			position: relative;
-			margin-right: 2px;
-			padding-right: 9px;
+			padding-right: 8px;
 
 			&:after {
 				content: '-';
 				position: absolute;
 				right: 0;
-				top: 5px;
-				font-size: fsz(12, 14);
+				top: 3px;
+				font-size: fsz(10, 14);
 				line-height: 1;
 			}
 
 			a {
 				position: relative;
-				font-weight: 400;
 
 				&:after {
 					content: '';
@@ -526,9 +538,10 @@ video {
 	}
 
 	a {
-		font-size: fsz(12, 14);
+		font-size: fsz(10, 14);
+		font-weight: 400;
 		line-height: 1.2;
-		color: $cb;
+		color: $c10;
 		text-decoration: none;
 
 		&:hover {
