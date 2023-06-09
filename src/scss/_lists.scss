@@ -115,3 +115,30 @@
 		margin-top: 28px;
 	}
 }
+
+.list-style-3 {
+	margin-bottom: 0;
+
+	li {
+		position: relative;
+		padding-left: 10px;
+		font-size: fsz(13, 14);
+		line-height: 1.35;
+		color: $c10;
+
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 2px;
+			height: 2px;
+			background-color: $c10;
+			border-radius: 2px;
+		}
+	}
+}
