@@ -432,3 +432,23 @@
 		flex-direction: column;
 	}
 }
+
+/*
+===========================
+	CONTACTS
+==========================
+*/
+.contacts-info-3+.contacts__map-wrapper {
+	margin-top: 55px;
+}
+
+.contacts__map-wrapper {
+	padding-top: 376px;
+}
+
+@media (min-width: 1231px) {
+	.contacts__map-wrapper {
+		margin-left: -65px;
+		margin-right: 65px;
+	}
+}
