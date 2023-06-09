@@ -110,6 +110,10 @@
 .contacts-info-2 {
 	display: flex;
 	align-items: flex-start;
+
+	&+.contacts-info-3 {
+		margin-top: 58px;
+	}
 }
 
 .contacts-info-2__img {
@@ -158,6 +162,58 @@
 	right: 8px;
 	bottom: 1px;
 	z-index: 1;
+}
+
+.contacts-info-3 {
+	display: flex;
+	color: $c10;
+
+	strong {
+		display: block;
+		margin-bottom: 8px;
+		font: 300 fsz(11, 14) $fb;
+	}
+
+	p {
+		margin-bottom: 0;
+		font-weight: 900;
+		font-family: $f1;
+
+		a[href^="tel"] {
+			text-decoration: none;
+			color: $c10;
+
+			&:hover {
+				color: $c3;
+			}
+		}
+	}
+
+	table {
+		margin-bottom: 0;
+
+		td {
+			line-height: 1.55;
+
+			&:first-child {
+				padding-right: 7px;
+				font-weight: 900;
+				font-family: $f1;
+			}
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.contacts-info-3 {
+		gap: 0 mp(100, 1038);
+	}
+}
+
+@media (min-width: 1231px) {
+	.contacts-info-3 {
+		padding-left: 57px;
+	}
 }
 
 .contacts-info-style-2 {
