@@ -380,3 +380,55 @@
 		flex-direction: column;
 	}
 }
+
+/*
+===========================
+	VENTILATION INSTALLATION
+==========================
+*/
+.ventilation-installation__info {
+	display: flex;
+
+	p {
+		padding-left: 10px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		&+.list-style-3 {
+			margin-top: 15px;
+		}
+	}
+}
+
+@media (min-width: 641px) {
+	.ventilation-installation__info {
+		gap: 0 mp(40, 595);
+
+		>div {
+			&:first-child {
+				flex: none;
+				width: 220px;
+			}
+
+			&:last-child {
+				flex-grow: 1;
+			}
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.ventilation-installation {
+		.content-4__aside {
+			order: -1;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.ventilation-installation__info {
+		flex-direction: column;
+	}
+}
