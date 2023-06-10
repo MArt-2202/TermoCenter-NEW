@@ -133,7 +133,8 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	}
 
 	.content-6 {
-		gap: 0 mp(50, 1160);
+		gap: 0 mp(50, 1055);
+		align-items: center;
 	}
 
 	.content-2__aside,
