@@ -516,7 +516,7 @@ const watchChanges = async () => {
 	watch(`${dirs.source}/svg/*.svg`, svgSpriteFillDelete);
 	// watch(`${dirs.source}/video/*.{mp4,jpg}`, copyVideo);
 	// watch(`${dirs.source}/js/partials/*.{js, min.js}`, copyAddJSFiles);
-	// watch(`${dirs.source}/plugins/**/*.js`, plugins);
+	watch(`${dirs.source}/plugins/**/*.js`, plugins);
 
 	// * или
 	// watch(`${dirs.source}/scss/**/*.scss`).on('change', browserSync.reload);
@@ -539,8 +539,8 @@ exports.default = series(
 		// copyVideo,
 		copyFavicon,
 		// copyAddJSFiles,
-		script
-		// plugins
+		script,
+		plugins
 	),
 	// criticalCss,
 	watchChanges
