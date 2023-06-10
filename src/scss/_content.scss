@@ -146,6 +146,43 @@
 
 /*
 ===========================
+	PORTFOLIO-2
+==========================
+*/
+.portfolio-2 {
+	h1 {
+		text-align: center;
+	}
+}
+
+.portfolio-2__categories-list {
+	&+.portfolio-2__list {
+		margin-top: 50px;
+	}
+}
+
+.categories-list {
+	text-align: center;
+}
+
+.portfolio-lightbox__item {
+	.list-img {
+		padding-top: 65%;
+		border-radius: 10px;
+		cursor: zoom-in;
+	}
+}
+
+@media (min-width: 1231px) {
+
+	.portfolio-2__categories-list,
+	.portfolio-2__list {
+		margin-left: -105px;
+	}
+}
+
+/*
+===========================
 	HEATING SYSTEM
 ==========================
 */
