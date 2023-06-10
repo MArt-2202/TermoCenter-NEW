@@ -4,6 +4,8 @@ import debounce from './modules/debounce';
 import blocksStyles from './modules/blocksStyles';
 import blockPosition from './modules/blockPosition';
 import lightbox from './modules/lightbox';
+import masketInput from './modules/masketInput';
+import sendFormData from './modules/sendFormData';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -24,6 +26,7 @@ if (isMobile()) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	masketInput();
 	debounce(function () {
 		blockPosition();
 		blocksStyles();
@@ -37,15 +40,26 @@ document.addEventListener('DOMContentLoaded', () => {
 		download: false,
 		mode: 'lg-fade',
 	});
-
 	lightbox({
-		container: '#info__lightbox',
-		selector: '.info-slider__item',
+		container: '.product-details__main',
+		selector: '.product-details__img',
 		plugins: [lgZoom],
 		speed: 500,
 		zoom: true,
 		download: false,
 		mode: 'lg-fade',
+	});
+	sendFormData({
+		closeBtn: '#order-form__close-btn',
+		hiddenNodes: '.order-form__content',
+		hasFormMessage: true,
+		formMessageNode: '.form__message',
+		formWrapper: '#order-form',
+		formSubmitBtn: '#order-form__submit',
+		dataAttr: '[data-key]',
+		requiredSelector: '[required]',
+		requiredClass: 'has-required',
+		dataModal: '',
 	});
 }); // END READY
 
