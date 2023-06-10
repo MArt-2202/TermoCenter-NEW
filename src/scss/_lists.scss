@@ -1,5 +1,6 @@
 .list-1,
-.list-2 {
+.list-2,
+.list-3 {
 	display: grid;
 }
 
@@ -33,9 +34,18 @@
 	}
 }
 
+.list-2,
+.list-3 {
+	gap: 20px;
+}
+
 .list-2 {
 	grid-template-columns: repeat(2, 1fr);
-	gap: 20px;
+
+}
+
+.list-3 {
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .list-style-1 {
@@ -139,6 +149,40 @@
 			height: 2px;
 			background-color: $c10;
 			border-radius: 2px;
+		}
+	}
+}
+
+.list-style-4 {
+	margin-bottom: 0;
+
+	li,
+	a {
+		display: inline-block;
+	}
+
+	li {
+		&:not(:last-child) {
+			margin-right: 5px;
+			margin-bottom: 9px;
+		}
+	}
+
+	a {
+		padding: 13px 20px 11px 20px;
+		font-size: fsz(13, 14);
+		font-weight: 400;
+		line-height: 1.2;
+		color: $c3;
+		background-color: $c4;
+		border-radius: 20px;
+		text-align: center;
+		text-decoration: none;
+
+		&:hover,
+		&.active {
+			background-color: $c3;
+			color: $c1
 		}
 	}
 }
