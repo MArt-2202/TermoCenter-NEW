@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+//=include('templates/head.html')
+
+<body itemscope itemtype="http://schema.org/WebPage">
+	//=include('templates/schemaOrgInfo.html')
+	//=include('templates/header.html')
+	<main role="main">
+		<span class="decor"></span>
+		//=include('html_modules/_inner.html')
+		<section>
+			<!-- CONTAINER -->
+			<div class="style-1 container">
+				<h2 class="tac">Популярні кондиціонери</h2>
+				//=include('html_modules/_products-list.html')
+			</div><!-- END CONTAINER -->
+			<!-- CONTAINER -->
+			<div class="style-1 container container-style-1">
+				//=include('html_modules/_info.html')
+			</div><!-- END CONTAINER -->
+		</section>
+	</main>
+	//=include('templates/footer.html')
+	//=include('templates/afterFooterContent.html')
+</body>
+
+</html>
