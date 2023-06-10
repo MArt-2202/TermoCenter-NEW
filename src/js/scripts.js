@@ -6,6 +6,7 @@ import blockPosition from './modules/blockPosition';
 import lightbox from './modules/lightbox';
 import masketInput from './modules/masketInput';
 import sendFormData from './modules/sendFormData';
+import sliders from './modules/sliders';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		requiredClass: 'has-required',
 		dataModal: '',
 	});
+	sliders();
 }); // END READY
 
 window.addEventListener('resize', () => {
