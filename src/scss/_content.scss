@@ -489,3 +489,49 @@
 		margin-right: 65px;
 	}
 }
+
+/*
+===========================
+	PRODUCTS LIST
+==========================
+*/
+.products-list {
+	a {
+		display: block;
+		height: 100%;
+		padding: 20px 20px 28px 20px;
+		border: 1px solid $c4;
+		border-radius: 15px;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+			border-color: $c3;
+		}
+	}
+
+	.list-img {
+		padding-top: 82.02%;
+
+		&+.products-list__info {
+			margin-top: 26px;
+		}
+	}
+
+	strong,
+	span {
+		display: block;
+	}
+
+	strong {
+		margin-bottom: 7px;
+		font: 900 fsz(23, 14)/1.2 $f1;
+		color: $c3;
+	}
+
+	span {
+		font-weight: 900;
+		line-height: 1;
+		color: $c10;
+	}
+}
