@@ -40,3 +40,200 @@ textarea {
 		opacity: 1;
 	}
 }
+
+.form {
+	position: relative;
+
+	label,
+	input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
+	select,
+	textarea {
+		font-size: fsz(11, 14);
+		font-weight: 400;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 7px;
+		line-height: 1;
+		text-align: center;
+
+		&:not(.style-check) {
+			&[data-required] {
+				span {
+					position: relative;
+					display: inline-block;
+					padding-right: 8px;
+
+					&:after {
+						content: '*';
+						position: absolute;
+						top: -1px;
+						right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
+	textarea,
+	select {
+		padding-left: 14px;
+		padding-right: 14px;
+	}
+
+
+	input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
+	textarea,
+	select {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+		font-weight: 300;
+		background-color: $c1;
+		border: 1px solid $c4;
+		border-radius: 5px;
+		@include trs;
+
+		&:focus {
+			border-color: $c3;
+		}
+	}
+
+	input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']) {
+		height: 26px;
+	}
+
+	textarea {
+		padding-top: 11px;
+		padding-bottom: 11px;
+		resize: vertical;
+		line-height: 1.2;
+	}
+
+	&.has-required {
+
+		input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
+		textarea {
+			&:required {
+				border-color: $c2;
+
+				&:valid {
+					border-color: $c12;
+				}
+			}
+		}
+	}
+}
+
+.form__content {
+	>div {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+
+		&+.form__submit {
+			margin-top: 33px;
+		}
+	}
+}
+
+.form__submit {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: fsz(11, 14);
+	font-weight: 400;
+	line-height: 1.2;
+	color: $c1;
+	text-align: center;
+	background-color: $c3;
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+	@include trs;
+
+	span {
+		background: linear-gradient(0deg, $c1, $c1) right bottom/0 2px no-repeat;
+		transition: background-size 0.3s;
+	}
+
+	&:hover {
+		text-decoration: none;
+
+		span {
+			background-size: 100% 1px;
+			background-position-x: left
+		}
+	}
+}
+
+.form__close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 2;
+	padding: 0;
+	cursor: pointer;
+	color: $c3;
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0);
+	@include trs;
+
+	svg {
+		width: 14px;
+		height: 14px;
+		fill: currentColor;
+		@include trs;
+	}
+
+	&:hover {
+		color: $c2;
+	}
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+}
+
+.form__message {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+
+	div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 15px;
+		overflow-y: auto;
+		text-align: center;
+		background-color: $c4;
+		border-radius: 0 15px 15px 0;
+
+		h2,
+		h3,
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.order-form {
+	padding: 33px 35px 35px 35px;
+}
