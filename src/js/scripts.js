@@ -3,6 +3,7 @@
 import debounce from './modules/debounce';
 import blocksStyles from './modules/blocksStyles';
 import blockPosition from './modules/blockPosition';
+import lightbox from './modules/lightbox';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -27,6 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		blockPosition();
 		blocksStyles();
 	}, 200);
+	lightbox({
+		container: '#portfolio-lightbox',
+		selector: '.portfolio-lightbox__item',
+		plugins: [lgZoom],
+		speed: 500,
+		zoom: true,
+		download: false,
+		mode: 'lg-fade',
+	});
+
+	lightbox({
+		container: '#info__lightbox',
+		selector: '.info-slider__item',
+		plugins: [lgZoom],
+		speed: 500,
+		zoom: true,
+		download: false,
+		mode: 'lg-fade',
+	});
 }); // END READY
 
 window.addEventListener('resize', () => {
