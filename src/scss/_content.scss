@@ -640,3 +640,57 @@
 		}
 	}
 }
+
+/*
+===========================
+	BENEFITS
+==========================
+*/
+.benefits__list {
+	li {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 78px;
+
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			fill: currentColor;
+		}
+	}
+
+	p,
+	strong {
+		line-height: 1.4
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 1.125rem;
+		font-weight: 500;
+		color: $c3;
+	}
+}
+
+.benefits__icon-1,
+.benefits__icon-2,
+.benefits__icon-3,
+.benefits__icon-4,
+.benefits__icon-5 {
+	width: 48px;
+	height: 48px;
+}
+
+.benefits__icon-6 {
+	width: 48px;
+	height: 36px;
+}
