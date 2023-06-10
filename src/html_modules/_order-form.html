@@ -1,0 +1,36 @@
+<form data-action="https://jsonplaceholder.typicode.com/users/1/posts" class="form order-form" id="order-form"
+	role="form">
+	<button type="button" class="form__close" id="order-form__close-btn" role="button" aria-label="Close message">
+		<svg>
+			<use href="img/sprite-svg-fill-delete.svg#close"></use>
+		</svg>
+	</button>
+	<div class="form__content order-form__content">
+		<div>
+			<label for="order-form__phone" data-required>
+				<span>Ваш телефон</span>
+			</label>
+			<input type="tel" id="order-form__phone" required data-key="phone">
+		</div>
+		<div>
+			<label for="order-form__address" data-required>
+				<span>Ваша адреса</span>
+			</label>
+			<input type="text" id="order-form__address" required data-key="address">
+		</div>
+		<button type="submit" class="form__submit" role="button" name="order-form__submit" id="order-form__submit">
+			<span>
+				Замовити<br>
+				безкоштовний<br>
+				виїзд майстра
+			</span>
+		</button>
+	</div>
+	<div class="form__message">
+		<div>
+			<p>
+				<strong>Замовлення прийнято !</strong>
+			</p>
+		</div>
+	</div>
+</form>
