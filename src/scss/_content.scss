@@ -694,3 +694,24 @@
 	width: 48px;
 	height: 36px;
 }
+
+/*
+===========================
+	ABOUT
+==========================
+*/
+.about {
+	p {
+		font-weight: 400;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.about__img {
+	img {
+		border-radius: 15px;
+	}
+}
