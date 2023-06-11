@@ -137,6 +137,11 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 		align-items: center;
 	}
 
+	.content-7 {
+		gap: 0 mp(60, 1030);
+		align-items: center;
+	}
+
 	.content-2__aside,
 	.content-3__aside,
 	.content-4__aside,
@@ -168,6 +173,11 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 
 	.content-6__aside {
 		width: mp(200, 1095);
+	}
+
+	.content-7__aside,
+	.content-7__main {
+		width: 50%;
 	}
 }
 
