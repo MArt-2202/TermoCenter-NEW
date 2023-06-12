@@ -824,6 +824,18 @@
 	}
 }
 
+@media (max-width: 1024px) {
+	.about {
+		.content {
+			gap: 55px 0;
+		}
+
+		.content__aside {
+			text-align: center;
+		}
+	}
+}
+
 /*
 ===========================
 	REVIEWS
