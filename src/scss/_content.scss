@@ -652,6 +652,7 @@
 	strong {
 		margin-bottom: 7px;
 		font: 900 fsz(23, 14)/1.2 $f1;
+		word-break: break-word;
 		color: $c3;
 	}
 
@@ -686,6 +687,18 @@
 	.products-list {
 		a {
 			padding: 15px 15px 23px 15px;
+		}
+
+		strong {
+			font-size: fsz(12, 14);
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.products-list {
+		strong {
+			font-size: fsz(10, 14);
 		}
 	}
 }
@@ -781,7 +794,7 @@
 	border-radius: 0 15px 15px 0;
 }
 
-@media (min-width: 641px) {
+@media (min-width: 769px) {
 	.product__details {
 		gap: 0 mp(40, 812);
 	}
@@ -791,6 +804,113 @@
 	.product {
 		.container {
 			padding-left: 145px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.product {
+		.content {
+			gap: 60px 0;
+		}
+
+		.list-style-5 {
+			display: flex;
+		}
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	.product {
+		.list-style-5 {
+			gap: 10px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.product {
+		.content {
+			gap: 60px 0;
+		}
+
+		.list-style-5 {
+			gap: 0 10px;
+			scroll-snap-type: x mandatory;
+			overflow-y: hidden;
+			overflow-x: auto;
+
+			li {
+				margin-bottom: 9px;
+				scroll-snap-align: start;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	.product-details__main {
+		padding: 20px;
+		gap: 0 mp(40, 706);
+	}
+
+	.product-details__info {
+		width: 50%;
+	}
+
+	.product__details {
+		flex-direction: column;
+		gap: 20px 0;
+	}
+
+	.product-details__aside {
+		width: 100%;
+		border-radius: 0 0 15px 15px;
+	}
+}
+
+@media (max-width: 576px) {
+	.product-details__main {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.product-details__img,
+	.product-details__info {
+		width: 100%;
+	}
+
+	.product-details__img {
+		display: none;
+
+		.list-img {
+			padding-top: 65%;
+		}
+	}
+
+	.product-details__info {
+		h2 {
+			font-size: fsz(20, 14);
+
+			&+span+.product-details__img {
+				display: block;
+				margin-top: 37px;
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.product-details__main {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.product-details__info {
+		h2 {
+			font-size: fsz(18, 14);
 		}
 	}
 }
