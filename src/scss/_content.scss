@@ -524,8 +524,6 @@
 
 @media (min-width: 641px) {
 	.ventilation-installation__info {
-		gap: 0 mp(40, 595);
-
 		>div {
 			&:first-child {
 				flex: none;
@@ -545,11 +543,34 @@
 			order: -1;
 		}
 	}
+
+	.ventilation-installation__info {
+		gap: 0 mp(40, 595);
+	}
+}
+
+@media (max-width: 1024px) {
+	.ventilation-installation {
+		.content {
+			gap: 55px 0;
+		}
+	}
+
+	.ventilation-installation__info {
+		gap: 0 mp(40, 944);
+	}
+}
+
+@media (max-width: 768px) {
+	.ventilation-installation__info {
+		gap: 0 mp(40, 708);
+	}
 }
 
 @media (max-width: 640px) {
 	.ventilation-installation__info {
 		flex-direction: column;
+		gap: 36px 0;
 	}
 }
 
