@@ -39,6 +39,12 @@ main {
 	padding-top: 50px;
 }
 
+@media (max-width: 1200px) {
+	main {
+		padding-top: 115px;
+	}
+}
+
 picture::selection,
 img::selection,
 table th::selection,
@@ -216,6 +222,34 @@ h2 {
 
 h3 {
 	font-size: fsz(23, 14);
+}
+
+@media (max-width: 576px) {
+	h1 {
+		font-size: fsz(28, 14);
+	}
+
+	h2 {
+		font-size: fsz(25, 14);
+	}
+
+	h3 {
+		font-size: fsz(20, 14);
+	}
+}
+
+@media (max-width: 360px) {
+	h1 {
+		font-size: fsz(25, 14);
+	}
+
+	h2 {
+		font-size: fsz(22, 14);
+	}
+
+	h3 {
+		font-size: fsz(18, 14);
+	}
 }
 
 blockquote,
