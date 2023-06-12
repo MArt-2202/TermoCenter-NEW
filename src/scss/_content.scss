@@ -203,6 +203,28 @@
 	text-align: center;
 }
 
+@media (max-width: 768px) {
+	.categories-list {
+		display: flex;
+		gap: 0 9px;
+		scroll-snap-type: x mandatory;
+		overflow-y: hidden;
+		overflow-x: auto;
+
+		li {
+			margin: 0;
+			scroll-snap-align: start;
+			white-space: nowrap;
+		}
+	}
+
+	.portfolio-2__categories-list {
+		&+.portfolio-2__list {
+			margin-top: 40px;
+		}
+	}
+}
+
 .portfolio-lightbox__item {
 	.list-img {
 		padding-top: 70.18%;
