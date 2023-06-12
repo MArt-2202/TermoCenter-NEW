@@ -15,8 +15,6 @@ export default function sliders() {
 				},
 			},
 			loop: true,
-			slidesPerView: 'auto',
-			spaceBetween: 30,
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
@@ -27,6 +25,12 @@ export default function sliders() {
 			},
 			forceToAxis: true,
 			speed: 600,
+			breakpoints: {
+				576: { slidesPerView: 'auto', spaceBetween: 30, autoHeight: false },
+				415: { slidesPerView: 1, spaceBetween: 20, autoHeight: true },
+				360: { slidesPerView: 1, spaceBetween: 20, autoHeight: true },
+				300: { slidesPerView: 1, spaceBetween: 15, autoHeight: true },
+			},
 		});
 	} else if (document.querySelector('.reviews-slider-wrapper')) {
 		document.querySelector('.reviews-slider-wrapper').classList.remove('style-2');
