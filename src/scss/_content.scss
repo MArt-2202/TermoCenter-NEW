@@ -1014,10 +1014,10 @@
 
 	.reviews-slider-wrapper {
 		margin-top: 0;
-		padding-top: 40px;
+		padding-top: 43px;
 
 		.slider-btn {
-			top: 0;
+			top: 5px;
 		}
 
 		.slider-btn--next {
@@ -1070,6 +1070,8 @@
 	}
 
 	.reviews-slider-wrapper {
+		padding-top: 37px;
+
 		.slider-btn--next {
 			right: calc(50% - 55px);
 		}
