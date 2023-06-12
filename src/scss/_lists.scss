@@ -273,24 +273,6 @@
 	}
 }
 
-@media (max-width: 576px) {
-	.list-style-4 {
-		a {
-			padding-left: 15px;
-			padding-right: 15px;
-			font-size: fsz(12, 14);
-		}
-	}
-}
-
-@media (max-width: 360px) {
-	.list-style-4 {
-		a {
-			font-size: fsz(11, 14);
-		}
-	}
-}
-
 .list-style-5 {
 
 	li,
@@ -317,6 +299,28 @@
 		&:hover {
 			background-color: $c3;
 			color: $c1
+		}
+	}
+}
+
+@media (max-width: 576px) {
+
+	.list-style-4,
+	.list-style-5 {
+		a {
+			padding-left: 15px;
+			padding-right: 15px;
+			font-size: fsz(12, 14);
+		}
+	}
+}
+
+@media (max-width: 360px) {
+
+	.list-style-4,
+	.list-style-5 {
+		a {
+			font-size: fsz(11, 14);
 		}
 	}
 }
