@@ -110,8 +110,20 @@
 }
 
 @media (max-width: 1024px) {
-	.top-section p+.top-section__list {
-		margin-top: 37px;
+	.top-section {
+		text-align: center;
+
+		p {
+			&+.top-section__list {
+				margin-top: 37px;
+			}
+		}
+	}
+
+	.top-section p,
+	.top-section__list {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.top__interactive-map {
