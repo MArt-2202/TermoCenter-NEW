@@ -423,7 +423,7 @@
 
 @media (min-width: 641px) {
 	.air-installation-2__info {
-		gap: 0 mp(40, 568);
+		gap: 0 mp(40, 944);
 
 		>div {
 			&:first-child {
@@ -438,9 +438,28 @@
 	}
 }
 
+@media (min-width: 1025px) {
+	.air-installation-2__info {
+		gap: 0 mp(40, 568);
+	}
+}
+
+@media (max-width: 1024px) {
+	.air-installation-2 {
+		.content {
+			gap: 58px 0;
+		}
+
+		.content__aside {
+			text-align: center;
+		}
+	}
+}
+
 @media (max-width: 640px) {
 	.air-installation-2__info {
 		flex-direction: column;
+		gap: 52px 0;
 	}
 }
 
