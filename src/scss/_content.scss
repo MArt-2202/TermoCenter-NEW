@@ -248,7 +248,7 @@
 			}
 
 			&:before {
-				top: 10px;
+				top: 12px;
 			}
 		}
 
@@ -316,6 +316,32 @@
 	.heating-system__info-style-2 {
 		>div {
 			width: 50%;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.heating-system {
+		.content {
+			gap: 33px 0;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.heating-system__info {
+		flex-direction: column;
+
+		ul {
+			li {
+				&:before {
+					top: 9px;
+				}
+			}
+
+			a {
+				font-size: fsz(16, 14);
+			}
 		}
 	}
 }
