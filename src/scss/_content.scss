@@ -662,6 +662,34 @@
 	}
 }
 
+@media (max-width: 576px) {
+	.products-list {
+		strong {
+			font-size: fsz(18, 14);
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.products-list {
+		strong {
+			font-size: 1rem;
+		}
+
+		span {
+			font-size: fsz(10, 14);
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.products-list {
+		a {
+			padding: 15px 15px 23px 15px;
+		}
+	}
+}
+
 /*
 ===========================
 	INFO
