@@ -109,6 +109,32 @@
 	}
 }
 
+@media (max-width: 1024px) {
+	.top-section p+.top-section__list {
+		margin-top: 37px;
+	}
+
+	.top__interactive-map {
+		margin-left: -33px;
+	}
+}
+
+@media (max-width: 360px) {
+	.top-section__list {
+		gap: 15px;
+	}
+
+	.top__interactive-map {
+		margin-left: -28px;
+	}
+}
+
+@media (max-width: 320px) {
+	.top__interactive-map {
+		margin-left: -23px;
+	}
+}
+
 /*
 ===========================
 	PORTFOLIO
