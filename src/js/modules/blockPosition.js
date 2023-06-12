@@ -1,4 +1,8 @@
 export default function blockPosition() {
+	const bl1 = document.querySelector('.product-details__img');
+	const bl2 = document.querySelector('.product-details__main');
+	const bl3 = document.querySelector('.product-details__info h2+span');
+
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
 
@@ -17,6 +21,9 @@ export default function blockPosition() {
 			document.body.classList.add('min-577');
 
 			if (document.querySelector('.min-577')) {
+				if (bl1 && bl2) {
+					bl2.prepend(bl1);
+				}
 			}
 		}
 	}
@@ -96,6 +103,9 @@ export default function blockPosition() {
 			document.body.classList.add('max-576');
 
 			if (document.querySelector('.max-576')) {
+				if (bl1 && bl3) {
+					bl3.after(bl1);
+				}
 			}
 		}
 	}
