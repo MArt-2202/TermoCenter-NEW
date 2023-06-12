@@ -779,7 +779,7 @@
 	strong {
 		display: block;
 		margin-bottom: 10px;
-		font-size: 1.125rem;
+		font-size: fsz(16, 14);
 		font-weight: 500;
 		color: $c3;
 	}
@@ -801,6 +801,22 @@
 .benefits__icon-6 {
 	width: 48px;
 	height: 35px;
+}
+
+@media (max-width: 576px) {
+	.benefits__list {
+		li {
+			padding-left: 68px;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.benefits__list {
+		li {
+			padding-left: 63px;
+		}
+	}
 }
 
 /*
