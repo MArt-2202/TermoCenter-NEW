@@ -66,7 +66,7 @@
 
 @media (max-width: 1200px) {
 	.overlay {
-		background-color: rgba($cb, 0.9);
+		background-color: rgba($c4, 0.95);
 	}
 }
 
@@ -319,6 +319,31 @@
 
 		&:after {
 			background-color: $c1;
+		}
+	}
+}
+
+.phones-info-style-3 {
+	a {
+		color: $c3;
+
+		&:after {
+			background-color: $c3;
+		}
+	}
+}
+
+.phones-info-style-4 {
+	li {
+		display: block;
+
+		&:not(:last-child) {
+			margin-right: 0;
+			margin-bottom: 12px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
