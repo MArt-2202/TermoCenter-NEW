@@ -300,7 +300,6 @@ ul:not([role="menu"], .reset-list) {
 		&:before {
 			content: '';
 			top: 8px;
-			left: 0;
 			width: 4px;
 			height: 4px;
 			background-color: $c3;
@@ -318,7 +317,6 @@ ol:not([role="menu"], .reset-list) {
 			content: counter(num);
 			counter-increment: num;
 			top: 1px;
-			left: 0;
 			width: 18px;
 			height: 18px;
 			font-size: fsz(8, 14);
