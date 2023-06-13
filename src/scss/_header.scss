@@ -61,21 +61,18 @@ header {
 	}
 
 	&:before {
-		transform: translateY(5px) rotate(135deg);
+		transform: translateY(8.5px) rotate(135deg);
 	}
 
 	&:after {
-		transform: translateY(-5px) rotate(-135deg);
-	}
-
-	&:hover {
-		background-color: $c1;
+		transform: translateY(-8.5px) rotate(-135deg);
 	}
 }
 
 .toggle__content {
 	z-index: 997;
-	background-color: $c3;
+	background-color: $c1;
+	filter: drop-shadow(0px 4px 10px rgba($cb, 0.25));
 	opacity: 0;
 	visibility: hidden;
 	transform: scaleY(0);
@@ -87,11 +84,63 @@ header {
 		overflow-y: auto;
 	}
 
+	section {
+		flex-basis: 33.3%;
+
+		&:not(:last-child) {
+			h2 {
+				padding-left: 14px;
+			}
+		}
+
+		h2 {
+			margin-bottom: 19px;
+			color: $cb;
+		}
+
+	}
+
 	&.content-visible {
 		opacity: 1;
 		visibility: visible;
 		transform: scaleY(1);
 	}
+}
+
+.header__list {
+	li {
+		position: relative;
+		padding-left: 14px;
+		line-height: 1.45;
+
+		&:not(:last-child) {
+			margin-bottom: 9px;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 4px;
+			height: 4px;
+			background-color: $c3;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		background: linear-gradient(0deg, $c3, $c3) right bottom/100% 1px no-repeat;
+
+		&:hover {
+			background-size: 0 1px;
+			background-position-x: right;
+		}
+	}
+}
+
+.header__phones-info-2+.header__contacts-info {
+	margin-top: 15px;
 }
 
 
@@ -123,11 +172,27 @@ header {
 	}
 
 	.toggle-wrapper {
+		width: 72px;
+		height: 54px;
 		padding: 18px 25px;
 
 		&:before {
 			top: -53px;
 			height: 53px;
+		}
+	}
+
+	.toggle__content {
+		position: absolute;
+		top: 100%;
+		left: -390px;
+		width: 940px;
+		padding: 44px 50px;
+		border-radius: 10px;
+
+		>div {
+			display: flex;
+			gap: 0 40px;
 		}
 	}
 }
@@ -159,6 +224,20 @@ header {
 		&:before {
 			top: -30px;
 			height: 30px;
+		}
+	}
+
+	.toggle__content {
+		position: fixed;
+		right: 0;
+		top: 65px;
+		bottom: 0;
+		width: calc(min(300px, 100%));
+		padding: 44px 20px;
+		border-radius: 10px 0 0 10px;
+
+		section+section {
+			margin-top: 35px;
 		}
 	}
 
