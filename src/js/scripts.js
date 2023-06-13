@@ -3,6 +3,7 @@
 import debounce from './modules/debounce';
 import blocksStyles from './modules/blocksStyles';
 import blockPosition from './modules/blockPosition';
+import toggleContent from './modules/toggleContent';
 import lightbox from './modules/lightbox';
 import masketInput from './modules/masketInput';
 import sendFormData from './modules/sendFormData';
@@ -28,6 +29,7 @@ if (isMobile()) {
 
 document.addEventListener('DOMContentLoaded', () => {
 	masketInput();
+	toggleContent();
 	debounce(function () {
 		blockPosition();
 		blocksStyles();
