@@ -171,7 +171,7 @@
 	strong {
 		display: block;
 		margin-bottom: 8px;
-		font: 300 fsz(11, 14) $fb;
+		font: fsz(11, 14) $fb;
 	}
 
 	p {
@@ -368,7 +368,6 @@
 		position: relative;
 		padding-bottom: 4px;
 		font-size: fsz(13, 14);
-		font-weight: 400;
 		line-height: 1;
 		text-decoration: none;
 
@@ -478,7 +477,6 @@
 
 .link-style-1 {
 	font-size: fsz(12, 14);
-	font-weight: 400;
 	line-height: 1.5;
 }
 
@@ -486,7 +484,6 @@
 	display: inline-block;
 	padding: 13px 20px 13px 20px;
 	font-size: fsz(13, 14);
-	font-weight: 400;
 	line-height: 1;
 	border-radius: 20px;
 	text-decoration: none;
