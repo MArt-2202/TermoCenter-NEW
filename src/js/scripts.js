@@ -35,15 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		blocksStyles();
 	}, 200);
 	lightbox({
-		container: '#portfolio-lightbox',
-		selector: '.portfolio-lightbox__item',
-		plugins: [lgZoom],
-		speed: 500,
-		zoom: true,
-		download: false,
-		mode: 'lg-fade',
-	});
-	lightbox({
 		container: '.product-details__main',
 		selector: '.product-details__img',
 		plugins: [lgZoom],
