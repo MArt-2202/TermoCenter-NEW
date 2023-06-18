@@ -8,6 +8,7 @@ import lightbox from './modules/lightbox';
 import masketInput from './modules/masketInput';
 import sendFormData from './modules/sendFormData';
 import sliders from './modules/sliders';
+import tableWrapper from './modules/tableWrapper';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		dataModal: '',
 	});
 	sliders();
+	tableWrapper();
 }); // END READY
 
 window.addEventListener('resize', () => {
