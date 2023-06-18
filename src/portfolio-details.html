@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+//=include('templates/head.html')
+
+<body itemscope itemtype="http://schema.org/WebPage">
+	//=include('templates/schemaOrgInfo.html')
+	//=include('templates/header.html')
+	<main role="main">
+		<span class="decor"></span>
+		<section class="style-1 portfolio-details">
+			<!-- CONTAINER -->
+			<div class="container container-style-2 container-style-4">
+				<ul class="reset-list breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+						<a itemprop="item" href="index.html" role="link">
+							<span itemprop="name">Головна</span>
+						</a>
+						<meta itemprop="position" content="1">
+					</li>
+					<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+						<a itemprop="item" href="javascript:void(0)" role="link">
+							<span itemprop="name">Портфоліо</span>
+						</a>
+						<meta itemprop="position" content="2">
+					</li>
+					<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+						<a itemprop="item" href="javascript:void(0)" role="link">
+							<span itemprop="name">Модернізація твердопаливной котельні приватний будинок с. Косарево</span>
+						</a>
+						<meta itemprop="position" content="3">
+					</li>
+				</ul>
+				<div class="content content-9">
+					<aside class="content__aside content-9__aside portfolio-details__slideshow" role="complementary">
+						<div class="portfolio-details__bl portfolio-details__bl-1">
+							//=include('html_modules/_portfolio-details-carousel.html')
+						</div>
+						<div class="portfolio-details__bl portfolio-details__bl-2">
+							//=include('html_modules/_portfolio-details-slider.html')
+						</div>
+					</aside>
+					<div class="content__main content-9__main portfolio-details__info">
+						//=include('html_modules/_portfolio-details-info.html')
+					</div>
+				</div>
+			</div><!-- END CONTAINER -->
+		</section>
+	</main>
+	//=include('templates/footer.html')
+	//=include('templates/afterFooterContent.html')
+</body>
+
+</html>
