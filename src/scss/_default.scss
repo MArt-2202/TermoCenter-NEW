@@ -148,11 +148,16 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 		align-items: center;
 	}
 
+	.content-8 {
+		gap: 0 40px;
+	}
+
 	.content-2__aside,
 	.content-3__aside,
 	.content-4__aside,
 	.content-5__aside,
-	.content-6__aside {
+	.content-6__aside,
+	.content-8__aside {
 		flex: none;
 	}
 
@@ -184,6 +189,14 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	.content-7__aside,
 	.content-7__main {
 		width: 50%;
+	}
+
+	.content-8__main {
+		flex-grow: 1;
+	}
+
+	.content-8__aside {
+		width: mp(450, 1095);
 	}
 }
 
@@ -346,6 +359,42 @@ a {
 table {
 	width: 100%;
 	margin-bottom: 40px;
+	border-collapse: separate;
+	border-spacing: 0 7px;
+}
+
+td {
+	padding: 15px 10px 14px 10px;
+	line-height: 1.4;
+	background-color: $c4;
+
+	&:first-child {
+		padding-left: 20px;
+	}
+
+	&:last-child {
+		padding-right: 20px;
+	}
+}
+
+@media (max-width: 415px) {
+	td {
+		font-size: fsz(12, 14);
+	}
+}
+
+@media (max-width: 360px) {
+	td {
+		padding: 10px 7.5px;
+
+		&:first-child {
+			padding-left: 15px;
+		}
+
+		&:last-child {
+			padding-right: 15px;
+		}
+	}
 }
 
 picture,
