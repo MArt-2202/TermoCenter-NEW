@@ -2,6 +2,9 @@ export default function blockPosition() {
 	const bl1 = document.querySelector('.product-details__img');
 	const bl2 = document.querySelector('.product-details__main');
 	const bl3 = document.querySelector('.product-details__info h2+span');
+	const bl4 = document.querySelector('.portfolio-details h1');
+	const bl5 = document.querySelector('.portfolio-details .content');
+	const bl6 = document.querySelector('.portfolio-details .content__main');
 
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
@@ -46,6 +49,9 @@ export default function blockPosition() {
 			document.body.classList.add('min-1025');
 
 			if (document.querySelector('.min-1025')) {
+				if (bl4 && bl6) {
+					bl6.prepend(bl4);
+				}
 			}
 		}
 	}
@@ -80,6 +86,9 @@ export default function blockPosition() {
 
 			if (document.querySelector('.max-1024')) {
 				if (document.querySelector('.max-1024')) {
+					if (bl4 && bl5) {
+						bl5.prepend(bl4);
+					}
 				}
 			}
 		}
