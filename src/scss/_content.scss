@@ -901,6 +901,18 @@
 	max-width: 620px;
 }
 
+@media (max-width: 1024px) {
+	.info-2 {
+		.content {
+			gap: 20px 0;
+		}
+
+		.content__aside {
+			text-align: center;
+		}
+	}
+}
+
 /*
 ===========================
 	PRODUCT
