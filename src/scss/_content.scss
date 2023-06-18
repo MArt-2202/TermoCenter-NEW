@@ -1225,7 +1225,6 @@
 	REVIEWS
 ==========================
 */
-
 .reviews-slider-wrapper {
 	position: relative;
 	margin-top: -28px;
@@ -1453,6 +1452,37 @@
 			p {
 				font-size: fsz(12, 14);
 			}
+		}
+	}
+}
+
+/*
+===========================
+	PARTNERS LIST
+==========================
+*/
+.partners__list {
+	a {
+		display: block;
+		height: 100%;
+		overflow: hidden;
+		background-color: $c1;
+		box-shadow: 5px 5px 20px rgba($c3, 0.05);
+		text-decoration: none;
+
+		&:hover {
+			box-shadow: 5px 5px 20px rgba($c3, 0.15);
+		}
+	}
+
+	.list-img-2 {
+		padding-top: 71.35%;
+
+		div {
+			top: 10px;
+			bottom: 10px;
+			left: 10px;
+			right: 10px;
 		}
 	}
 }
