@@ -7,7 +7,6 @@ import toggleContent from './modules/toggleContent';
 import lightbox from './modules/lightbox';
 import masketInput from './modules/masketInput';
 import sendFormData from './modules/sendFormData';
-import sliders from './modules/sliders';
 import tableWrapper from './modules/tableWrapper';
 
 if ('ontouchstart' in document.documentElement) {
@@ -44,6 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		download: false,
 		mode: 'lg-fade',
 	});
+	lightbox({
+		container: '#portfolio-details-slider-lightbox',
+		selector: '.portfolio-details-slider__item',
+		plugins: [lgZoom],
+		speed: 500,
+		zoom: true,
+		download: false,
+		mode: 'lg-fade',
+	});
 	sendFormData({
 		closeBtn: '#order-form__close-btn',
 		hiddenNodes: '.order-form__content',
@@ -56,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		requiredClass: 'has-required',
 		dataModal: '',
 	});
-	sliders();
 	tableWrapper();
 }); // END READY
 
