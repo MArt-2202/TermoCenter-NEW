@@ -5,6 +5,7 @@ export default function blockPosition() {
 	const bl4 = document.querySelector('.portfolio-details h1');
 	const bl5 = document.querySelector('.portfolio-details .content');
 	const bl6 = document.querySelector('.portfolio-details .content__main');
+	const bl7 = document.querySelector('.portfolio-details__price');
 
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
@@ -52,6 +53,9 @@ export default function blockPosition() {
 				if (bl4 && bl6) {
 					bl6.prepend(bl4);
 				}
+				if (bl4 && bl7) {
+					bl4.after(bl7);
+				}
 			}
 		}
 	}
@@ -88,6 +92,9 @@ export default function blockPosition() {
 				if (document.querySelector('.max-1024')) {
 					if (bl4 && bl5) {
 						bl5.prepend(bl4);
+					}
+					if (bl4 && bl7) {
+						bl4.after(bl7);
 					}
 				}
 			}
