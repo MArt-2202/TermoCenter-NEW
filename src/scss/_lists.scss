@@ -3,7 +3,8 @@
 .list-3,
 .list-4,
 .list-5,
-.list-6 {
+.list-6,
+.list-7 {
 	display: grid;
 }
 
@@ -38,6 +39,11 @@
 .list-6 {
 	grid-template-columns: repeat(6, 1fr);
 	gap: 35px;
+}
+
+.list-7 {
+	grid-template-columns: repeat(2, 1fr);
+	gap: 17px;
 }
 
 .list-style-1 {
@@ -182,12 +188,17 @@
 @media (max-width: 415px) {
 
 	.list-1,
-	.list-3 {
+	.list-3,
+	.list-7 {
 		grid-template-columns: repeat(1, 1fr);
 	}
 
 	.list-6 {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.list-7 {
+		gap: 20px;
 	}
 }
 
@@ -196,7 +207,8 @@
 	.list-1,
 	.list-3,
 	.list-4,
-	.list-6 {
+	.list-6,
+	.list-7 {
 		gap: 15px;
 	}
 
