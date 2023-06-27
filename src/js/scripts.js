@@ -53,12 +53,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		mode: 'lg-fade',
 	});
 	sendFormData({
-		closeBtn: '#order-form__close-btn',
-		hiddenNodes: '.order-form__content',
+		closeBtn: '.form__close',
+		hiddenNodes: '.form__content',
 		hasFormMessage: true,
 		formMessageNode: '.form__message',
 		formWrapper: '#order-form',
-		formSubmitBtn: '#order-form__submit',
+		formSubmitBtn: '.form__submit',
+		dataAttr: '[data-key]',
+		requiredSelector: '[required]',
+		requiredClass: 'has-required',
+		dataModal: '',
+	});
+	sendFormData({
+		closeBtn: '.form__close',
+		hiddenNodes: '.form__content',
+		hasFormMessage: true,
+		formMessageNode: '.form__message',
+		formWrapper: '#consultation-form',
+		formSubmitBtn: '.form__submit',
 		dataAttr: '[data-key]',
 		requiredSelector: '[required]',
 		requiredClass: 'has-required',
