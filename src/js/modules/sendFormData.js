@@ -15,25 +15,22 @@ export default function sendFormData({
 			url = form.dataset?.action,
 			sendData = {},
 			formData = new FormData(),
-			formMessage = document.querySelector(formMessageNode),
+			formMessage = form.querySelector(formMessageNode),
 			selectList = [];
 
-		if (document.querySelector(formWrapper).querySelectorAll('select')) {
-			document
-				.querySelector(formWrapper)
-				.querySelectorAll('select')
-				.forEach((el) => {
-					const selectData = {
-						id: el.getAttribute('id'),
-						value: el.value,
-					};
+		if (form.querySelectorAll('select')) {
+			form.querySelectorAll('select').forEach((el) => {
+				const selectData = {
+					id: el.getAttribute('id'),
+					value: el.value,
+				};
 
-					selectList.push(selectData);
-				});
+				selectList.push(selectData);
+			});
 		}
 
-		if (document.querySelector(formSubmitBtn)) {
-			document.querySelector(formSubmitBtn).addEventListener('click', function (e) {
+		if (form.querySelector(formSubmitBtn)) {
+			form.querySelector(formSubmitBtn).addEventListener('click', function (e) {
 				if (requiredSelector && form.querySelector(requiredSelector)) {
 					form.classList.add(requiredClass);
 				}
@@ -76,7 +73,7 @@ export default function sendFormData({
 						formMessage.style.display = 'block';
 
 						if (closeBtn !== '') {
-							document.querySelector(closeBtn).classList.add('show');
+							form.querySelector(closeBtn).classList.add('show');
 						}
 					}
 
@@ -108,24 +105,22 @@ export default function sendFormData({
 								el.classList.add('hidden');
 							});
 						} else {
-							document.querySelectorAll(hiddenNodes).forEach((el) => {
+							form.querySelectorAll(hiddenNodes).forEach((el) => {
 								el.classList.add('hidden');
 							});
 							if (
 								closeBtn !== '' &&
-								document.querySelector(closeBtn).classList.contains('show')
+								form.querySelector(closeBtn).classList.contains('show')
 							) {
-								document.querySelector(closeBtn).addEventListener('click', function (e) {
+								form.querySelector(closeBtn).addEventListener('click', function (e) {
 									e.preventDefault();
 									e.stopPropagation();
 
-									document.querySelector(closeBtn).classList.remove('show');
+									form.querySelector(closeBtn).classList.remove('show');
 									if (formMessage) {
 										formMessage.style.display = 'none';
 									}
-									document.querySelectorAll(hiddenNodes).forEach((el) => {
-										el.classList.remove('hidden');
-									});
+									form.querySelector(hiddenNodes).classList.remove('hidden');
 								});
 							}
 						}
