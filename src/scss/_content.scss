@@ -12,7 +12,7 @@
 			margin-bottom: 0;
 		}
 
-		&+.top-section__list {
+		& + .top-section__list {
 			margin-top: 65px;
 		}
 	}
@@ -25,7 +25,6 @@
 	max-width: calc(min(300px, 100%));
 
 	li {
-
 		&:nth-child(4),
 		&:nth-child(5),
 		&:nth-child(6),
@@ -114,7 +113,7 @@
 		text-align: center;
 
 		p {
-			&+.top-section__list {
+			& + .top-section__list {
 				margin-top: 37px;
 			}
 		}
@@ -189,7 +188,7 @@
 		padding-top: 60.27%;
 		border-radius: 10px;
 
-		&+div {
+		& + div {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
@@ -227,16 +226,15 @@
 
 @media (min-width: 1025px) {
 	.portfolio__list {
-		>div {
-
-			&:first-child,
-			&:nth-child(2) {
+		> div {
+			&:first-child {
 				.list-img {
-					padding-top: 73.276%;
+					padding-top: 40.834%;
 				}
 			}
 
-			&:nth-child(3) {
+			&:nth-child(2),
+			&:nth-child(5) {
 				.list-img {
 					padding-top: 0;
 					height: 100%;
@@ -249,7 +247,7 @@
 @media (max-width: 1024px) {
 	.portfolio__list {
 		.list-img {
-			&+div {
+			& + div {
 				left: mp(40, 452);
 				right: mp(40, 452);
 				bottom: mp(32, 272);
@@ -261,7 +259,7 @@
 @media (max-width: 576px) {
 	.portfolio__list {
 		.list-img {
-			&+div {
+			& + div {
 				left: 20px;
 				right: 20px;
 				bottom: 13px;
@@ -274,10 +272,10 @@
 	}
 }
 
-@media (max-width:360px) {
+@media (max-width: 360px) {
 	.portfolio__list {
 		.list-img {
-			&+div {
+			& + div {
 				left: 15px;
 				right: 15px;
 				bottom: 9px;
@@ -302,7 +300,7 @@
 }
 
 .portfolio-2__categories-list {
-	&+.portfolio-2__list {
+	& + .portfolio-2__list {
 		margin-top: 50px;
 	}
 }
@@ -327,7 +325,7 @@
 	}
 
 	.portfolio-2__categories-list {
-		&+.portfolio-2__list {
+		& + .portfolio-2__list {
 			margin-top: 40px;
 		}
 	}
@@ -363,7 +361,7 @@
 		padding-top: 60.27%;
 		border-radius: 10px;
 
-		&+div {
+		& + div {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
@@ -413,7 +411,6 @@
 }
 
 @media (min-width: 1231px) {
-
 	.portfolio-2__categories-list,
 	.portfolio-2__list {
 		margin-left: -105px;
@@ -423,7 +420,7 @@
 @media (max-width: 360px) {
 	.portfolio-no-lightbox__item {
 		.list-img {
-			&+div {
+			& + div {
 				bottom: 9px;
 				left: 15px;
 				right: 15px;
@@ -438,7 +435,7 @@
 ==========================
 */
 .heating-system {
-	h2+.heating-system__info {
+	h2 + .heating-system__info {
 		margin-top: -4px;
 	}
 
@@ -525,7 +522,7 @@
 	}
 
 	.heating-system__info-style-1 {
-		>div {
+		> div {
 			&:first-child {
 				flex: none;
 				width: 220px;
@@ -538,7 +535,7 @@
 	}
 
 	.heating-system__info-style-2 {
-		>div {
+		> div {
 			width: 50%;
 		}
 	}
@@ -577,7 +574,6 @@
 */
 @media (min-width: 1025px) {
 	.air-installation-style {
-
 		.content-1__aside,
 		.content-4__aside {
 			order: -1;
@@ -595,7 +591,7 @@
 			margin-bottom: 0;
 		}
 
-		&+.air-installation__list {
+		& + .air-installation__list {
 			margin-top: 40px;
 		}
 	}
@@ -628,7 +624,6 @@
 
 @media (min-width: 1025px) {
 	.air-installation {
-
 		h2,
 		p {
 			padding-left: 20px;
@@ -642,14 +637,13 @@
 ==========================
 */
 .air-installation-2 {
-
 	.list-style-1,
 	.list-style-2 {
 		margin-bottom: 0;
 	}
 
 	.list-style-1 {
-		&+.link-1 {
+		& + .link-1 {
 			display: table;
 			margin: 20px auto 0 auto;
 		}
@@ -674,7 +668,7 @@
 	.air-installation-2__info {
 		gap: 0 mp(40, 944);
 
-		>div {
+		> div {
 			&:first-child {
 				flex: none;
 				width: 220px;
@@ -727,7 +721,7 @@
 			margin-bottom: 0;
 		}
 
-		&+.list-style-3 {
+		& + .list-style-3 {
 			margin-top: 15px;
 		}
 	}
@@ -735,7 +729,7 @@
 
 @media (min-width: 641px) {
 	.ventilation-installation__info {
-		>div {
+		> div {
 			&:first-child {
 				flex: none;
 				width: 220px;
@@ -790,7 +784,7 @@
 	CONTACTS
 ==========================
 */
-.contacts-info-3+.contacts__map-wrapper {
+.contacts-info-3 + .contacts__map-wrapper {
 	margin-top: 55px;
 }
 
@@ -828,7 +822,7 @@
 	.list-img {
 		padding-top: 82.02%;
 
-		&+.products-list__info {
+		& + .products-list__info {
 			margin-top: 26px;
 		}
 	}
@@ -840,7 +834,7 @@
 
 	strong {
 		margin-bottom: 7px;
-		font: 900 fsz(23, 14)/1.2 $f1;
+		font: 900 fsz(23, 14) / 1.2 $f1;
 		word-break: break-word;
 		color: $c3;
 	}
@@ -979,12 +973,12 @@
 		margin-bottom: 7px;
 		font-size: fsz(23, 14);
 
-		&+span {
+		& + span {
 			display: block;
 			font-weight: 900;
 			color: $c10;
 
-			&+ul {
+			& + ul {
 				margin-top: 27px;
 			}
 		}
@@ -1097,7 +1091,7 @@
 		h2 {
 			font-size: fsz(20, 14);
 
-			&+span+.product-details__img {
+			& + span + .product-details__img {
 				display: block;
 				margin-top: 37px;
 				margin-bottom: 40px;
@@ -1141,7 +1135,7 @@
 
 	p,
 	strong {
-		line-height: 1.4
+		line-height: 1.4;
 	}
 
 	p {
@@ -1252,7 +1246,7 @@
 		}
 	}
 
-	.swiper-horizontal>.swiper-pagination-bullets,
+	.swiper-horizontal > .swiper-pagination-bullets,
 	.swiper-pagination-bullets.swiper-pagination-horizontal,
 	.swiper-pagination-custom,
 	.swiper-pagination-fraction {
@@ -1280,7 +1274,7 @@
 	align-items: center;
 	gap: 0 18px;
 
-	>div {
+	> div {
 		&:first-child {
 			width: 52px;
 		}
@@ -1300,7 +1294,7 @@
 	span {
 		color: $c13;
 
-		&+strong {
+		& + strong {
 			margin-top: 6px;
 		}
 	}
@@ -1314,7 +1308,7 @@
 		}
 	}
 
-	&+p {
+	& + p {
 		margin-top: 18px;
 	}
 }
@@ -1420,7 +1414,7 @@
 		font-size: 1rem;
 	}
 
-	.reviews-slider__person span+strong {
+	.reviews-slider__person span + strong {
 		font-size: fsz(13, 14);
 	}
 
@@ -1434,7 +1428,7 @@
 }
 
 @media (max-width: 360px) {
-	.reviews-slider__person span+strong {
+	.reviews-slider__person span + strong {
 		font-size: fsz(12, 14);
 	}
 
@@ -1497,7 +1491,7 @@
 ==========================
 */
 .portfolio-details {
-	.breadcrumbs+.content {
+	.breadcrumbs + .content {
 		padding-top: 25px;
 	}
 
@@ -1524,7 +1518,7 @@
 	font-weight: 900;
 	color: $c10;
 
-	&+.portfolio-details__add {
+	& + .portfolio-details__add {
 		margin-top: 38px;
 	}
 }
@@ -1600,7 +1594,7 @@
 	gap: 0 mp(40, 507);
 	align-items: center;
 
-	ul+p {
+	ul + p {
 		margin-top: 32px;
 	}
 
@@ -1612,11 +1606,11 @@
 		}
 	}
 
-	&+p {
+	& + p {
 		margin-top: 37px;
 	}
 
-	&~p {
+	& ~ p {
 		&:last-of-type {
 			margin-bottom: 0;
 		}
@@ -1778,15 +1772,15 @@
 			display: none;
 		}
 
-		.content__aside+.content__main {
+		.content__aside + .content__main {
 			margin-top: 40px;
 		}
 
 		.content-9 {
-			>h1 {
+			> h1 {
 				display: block;
 
-				&+.portfolio-details__price {
+				& + .portfolio-details__price {
 					display: block;
 					margin-bottom: 38px;
 				}
