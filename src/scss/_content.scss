@@ -164,17 +164,17 @@
 		height: 100%;
 		text-decoration: none;
 
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(360deg, $c3 0%, rgba($c3, 0) 72.97%);
-			border-radius: 10px;
-		}
+		// &:after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	z-index: 1;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	background: linear-gradient(360deg, $c3 0%, rgba($c3, 0) 72.97%);
+		// 	border-radius: 10px;
+		// }
 
 		&:hover {
 			strong {
