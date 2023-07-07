@@ -356,16 +356,6 @@ const webpImg = async () => {
 
 exports.webpImg = webpImg;
 
-// SVG IMAGES
-const svgImg = async () => {
-	return src(`${dirs.source}/img/flags/*.svg`)
-		.pipe($.newer(`${dirs.build}/img/flags`))
-		.pipe($.plumber())
-		.pipe(dest(`${dirs.build}/img/flags`));
-};
-
-exports.webpImg = svgImg;
-
 // CHECK EXIST FILE, DIRECTORY
 const fileExist = async (path) => {
 	const fs = require('fs');
@@ -511,7 +501,6 @@ const watchChanges = async () => {
 	watch(`${dirs.source}/js/scripts.js`, script);
 	watch(`${dirs.source}/img/*.{gif,png,jpg,jpeg,svg,webp}`, copyImg);
 	watch(`${dirs.source}/img/*.{png,jpg,jpeg}`, webpImg);
-	watch(`${dirs.source}/img/flags/*.svg`, svgImg);
 	// watch(`${dirs.source}/svg/*.svg`, svgSprite);
 	watch(`${dirs.source}/svg/*.svg`, svgSpriteFillDelete);
 	// watch(`${dirs.source}/video/*.{mp4,jpg}`, copyVideo);
@@ -533,7 +522,6 @@ exports.default = series(
 		copyFonts,
 		copyImg,
 		webpImg,
-		svgImg,
 		svgSprite,
 		svgSpriteFillDelete,
 		// copyVideo,
