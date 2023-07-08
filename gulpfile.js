@@ -88,7 +88,7 @@ exports.clear = clear;
 // COPY *.HTML
 const copyHtml = async () => {
 	return src(`${dirs.source}/*.html`)
-		.pipe($.changed(`${dirs.build}`))
+		.pipe($.changed(`${dirs.build}`, { hasChanged: $.changed.compareContents }))
 		.pipe($.plumber())
 		.pipe(
 			include({
