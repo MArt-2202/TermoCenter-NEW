@@ -88,7 +88,7 @@ exports.clear = clear;
 // COPY *.HTML
 const copyHtml = async () => {
 	return src(`${dirs.source}/*.html`)
-		.pipe($.newer(`${dirs.build}`))
+		.pipe($.changed(`${dirs.build}`))
 		.pipe($.plumber())
 		.pipe(
 			include({
@@ -104,7 +104,7 @@ exports.copyHtml = copyHtml;
 // WORK WITH STYLE.SCSS
 const styles = async () => {
 	return src(`${dirs.source}/scss/**/style.scss`)
-		.pipe($.newer(`${dirs.build}/css`))
+		.pipe($.changed(`${dirs.build}/css`))
 		.pipe($.plumber())
 		.pipe($.if(!argv.prod, $.sourcemaps.init()))
 		.pipe($.wait(250))
@@ -138,7 +138,7 @@ exports.styles = styles;
 // WORK WITH SCRIPTS.JS
 // const script = async () => {
 // 	return src(`${dirs.source}/js/scripts.js`)
-// 		.pipe($.newer(`${dirs.build}/js`))
+// 		.pipe($.changed(`${dirs.build}/js`))
 // 		.pipe($.plumber())
 // 		.pipe(
 // 			include({
@@ -164,7 +164,7 @@ exports.styles = styles;
 
 const script = async () => {
 	return src(`${dirs.source}/js/scripts.js`)
-		.pipe($.newer(`${dirs.build}/js`))
+		.pipe($.changed(`${dirs.build}/js`))
 		.pipe($.plumber())
 		.pipe(webpackStream(webpackConfig))
 		.pipe(dest(`${dirs.build}/js`))
@@ -176,7 +176,7 @@ exports.script = script;
 // COPY ADD JS FILES
 const copyAddJSFiles = async () => {
 	return src(`${dirs.source}/js/partials/*.{js, min.js}`)
-		.pipe($.newer(`${dirs.build}/js`))
+		.pipe($.changed(`${dirs.build}/js`))
 		.pipe($.plumber())
 		.pipe(dest(`${dirs.build}/js`));
 };
@@ -186,7 +186,7 @@ exports.copyAddJSFiles = copyAddJSFiles;
 // PLUGINS
 const plugins = async () => {
 	return src(`${dirs.source}/plugins/*.js`)
-		.pipe($.newer(`${dirs.build}/js`))
+		.pipe($.changed(`${dirs.build}/js`))
 		.pipe($.plumber())
 		.pipe($.concat('plugins.js'))
 		.pipe(
@@ -322,7 +322,7 @@ exports.plugins = plugins;
 // COPY IMAGES
 const copyImg = async () => {
 	return src(`${dirs.source}/img/*.{gif,png,jpg,jpeg,svg,webp}`)
-		.pipe($.newer(`${dirs.build}/img`))
+		.pipe($.changed(`${dirs.build}/img`))
 		.pipe($.plumber())
 		.pipe(
 			$.if(
@@ -344,7 +344,7 @@ exports.copyImg = copyImg;
 // WEBP IMAGES
 const webpImg = async () => {
 	return src(`${dirs.source}/img/*.{png,jpg,jpeg}`)
-		.pipe($.newer(`${dirs.build}/img/webp`))
+		.pipe($.changed(`${dirs.build}/img/webp`))
 		.pipe($.plumber())
 		.pipe(
 			$.webp({
@@ -373,7 +373,7 @@ const svgSprite = async () => {
 	const spritePath = `${dirs.source}/svg`;
 	if (fileExist(spritePath) !== false) {
 		return src(spritePath + '/*.svg')
-			.pipe($.newer(`${dirs.build}/img`))
+			.pipe($.changed(`${dirs.build}/img`))
 			.pipe($.plumber())
 			.pipe(
 				$.svgmin(function (file) {
@@ -408,7 +408,7 @@ const svgSpriteFillDelete = async () => {
 	if (fileExist(spritePath) !== false) {
 		return (
 			src(spritePath + '/*.svg')
-				.pipe($.newer(`${dirs.build}/img`))
+				.pipe($.changed(`${dirs.build}/img`))
 				.pipe($.plumber())
 				.pipe(
 					$.svgmin(function (file) {
@@ -453,7 +453,7 @@ exports.svgSpriteFillDelete = svgSpriteFillDelete;
 // COPY VIDEO
 const copyVideo = async () => {
 	return src(`${dirs.source}/video/*.{mp4,jpg}`)
-		.pipe($.newer(`${dirs.build}/video`))
+		.pipe($.changed(`${dirs.build}/video`))
 		.pipe($.plumber())
 		.pipe(dest(`${dirs.build}/video`));
 };
@@ -463,7 +463,7 @@ exports.copyVideo = copyVideo;
 // COPY FAVICON
 const copyFavicon = async () => {
 	return src(dirs.source + '/favicon/*.{png,ico,json,xml,webmanifest}')
-		.pipe($.newer(`${dirs.build}/img/favicon`))
+		.pipe($.changed(`${dirs.build}/img/favicon`))
 		.pipe($.plumber())
 		.pipe(dest(`${dirs.build}/img/favicon`));
 };
@@ -473,7 +473,7 @@ exports.copyFavicon = copyFavicon;
 // COPY FONTS
 const copyFonts = async () => {
 	return src(`${dirs.source}/fonts/**/*.{eot,svg,ttf,woff,woff2}`)
-		.pipe($.newer(`${dirs.build}/fonts`))
+		.pipe($.changed(`${dirs.build}/fonts`))
 		.pipe($.plumber())
 		.pipe(dest(`${dirs.build}/fonts`));
 };
