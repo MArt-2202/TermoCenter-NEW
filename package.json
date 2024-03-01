@@ -26,6 +26,7 @@
 		"gsap": "^3.11.4",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
+		"gulp-avif": "^1.1.1",
 		"gulp-babel": "^8.0.0",
 		"gulp-changed": "^4.0.3",
 		"gulp-cheerio": "^1.0.0",
@@ -52,8 +53,8 @@
 		"imagemin-pngquant": "^9.0.2",
 		"npm": "^8.17.0",
 		"path": "^0.12.7",
-		"sass": "^1.57.1",
-		"webpack-stream": "^6.1.2",
+		"sass": "^1.71.1",
+		"webpack-stream": "^7.0.0",
 		"yargs": "^15.4.1"
 	},
 	"dependencies": {
