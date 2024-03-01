@@ -21,7 +21,7 @@ const gulp = require('gulp'),
 		output: {
 			filename: 'scripts.min.js',
 		},
-		devtool: !argv.prod ? 'eval-source-map' : 'none',
+		devtool: !argv.prod ? 'eval-source-map' : undefined,
 		module: {
 			rules: [
 				{
@@ -103,34 +103,36 @@ exports.copyHtml = copyHtml;
 
 // WORK WITH STYLE.SCSS
 const styles = async () => {
-	return src(`${dirs.source}/scss/**/style.scss`)
-		.pipe($.changed(`${dirs.build}/css`))
-		.pipe($.plumber())
-		.pipe($.if(!argv.prod, $.sourcemaps.init()))
-		.pipe($.wait(250))
-		.pipe(sass().on('error', sass.logError))
-		.pipe(
-			$.if(
-				argv.prod,
-				$.autoprefixer({
-					cascade: false,
-					// grid: true, // for IE
-				})
+	return (
+		src(`${dirs.source}/scss/**/style.scss`)
+			.pipe($.changed(`${dirs.build}/css`))
+			.pipe($.plumber())
+			.pipe($.if(!argv.prod, $.sourcemaps.init()))
+			// .pipe($.wait(250))
+			.pipe(sass.sync().on('error', sass.logError))
+			.pipe(
+				$.if(
+					argv.prod,
+					$.autoprefixer({
+						cascade: false,
+						// grid: true, // for IE
+					})
+				)
 			)
-		)
-		.pipe($.if(argv.prod, $.groupCssMediaQueries()))
-		.pipe(
-			$.if(
-				argv.prod,
-				$.cleanCss({
-					level: 2,
-				})
+			.pipe($.if(argv.prod, $.groupCssMediaQueries()))
+			.pipe(
+				$.if(
+					argv.prod,
+					$.cleanCss({
+						level: 2,
+					})
+				)
 			)
-		)
-		.pipe($.concat('style.min.css'))
-		.pipe($.if(!argv.prod, $.sourcemaps.write('./')))
-		.pipe(dest(`${dirs.build}/css`))
-		.pipe(browserSync.stream());
+			.pipe($.concat('style.min.css'))
+			.pipe($.if(!argv.prod, $.sourcemaps.write('./')))
+			.pipe(dest(`${dirs.build}/css`))
+			.pipe(browserSync.stream())
+	);
 };
 
 exports.styles = styles;
@@ -501,7 +503,7 @@ const watchChanges = async () => {
 	watch(`${dirs.source}/js/scripts.js`, script);
 	watch(`${dirs.source}/img/*.{gif,png,jpg,jpeg,svg,webp}`, copyImg);
 	watch(`${dirs.source}/img/*.{png,jpg,jpeg}`, webpImg);
-	// watch(`${dirs.source}/svg/*.svg`, svgSprite);
+	watch(`${dirs.source}/svg/*.svg`, svgSprite);
 	watch(`${dirs.source}/svg/*.svg`, svgSpriteFillDelete);
 	// watch(`${dirs.source}/video/*.{mp4,jpg}`, copyVideo);
 	// watch(`${dirs.source}/js/partials/*.{js, min.js}`, copyAddJSFiles);
