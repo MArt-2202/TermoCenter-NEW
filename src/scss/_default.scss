@@ -130,6 +130,14 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 @media (min-width: 1025px) {
 	.content-1 {
 		gap: 0 mp(60, 1135);
+
+	}
+
+	.content-1,
+	.content-4,
+	.content-6,
+	.content-7,
+	.content-10 {
 		align-items: center;
 	}
 
@@ -144,25 +152,22 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 
 	.content-6 {
 		gap: 0 mp(50, 1055);
-		align-items: center;
 	}
 
 	.content-7 {
 		gap: 0 mp(60, 1030);
-		align-items: center;
 	}
 
 	.content-8 {
 		gap: 0 40px;
 	}
 
-	.content-2__aside,
-	.content-3__aside,
-	.content-4__aside,
-	.content-5__aside,
-	.content-6__aside,
-	.content-8__aside {
+	.content__aside {
 		flex: none;
+	}
+
+	.content__main {
+		flex-grow: 1;
 	}
 
 	.content-2__aside {
@@ -175,7 +180,6 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 
 	.content-4 {
 		gap: 0 mp(60, 1200);
-		align-items: center;
 	}
 
 	.content-4__aside {
@@ -211,11 +215,20 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	.content-9__main {
 		width: 50%;
 	}
+
+	.content-10__aside {
+		width: calc(min(429px, 1030));
+	}
 }
 
 @media (max-width: 1024px) {
 	.content {
 		flex-direction: column;
+	}
+
+	.content-10 {
+
+		row-gap: 40px;
 	}
 }
 
